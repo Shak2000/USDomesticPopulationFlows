@@ -1,3 +1,9 @@
+CREATE TABLE FIPS (
+    fips INTEGER PRIMARY KEY,
+    name VARCHAR(50),
+    postal_code VARCHAR(2)
+);
+
 CREATE TABLE StateOutflow2122 (
     fips_orig INTEGER,
     fips_dest INTEGER,
