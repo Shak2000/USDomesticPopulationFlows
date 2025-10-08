@@ -15,3 +15,18 @@ SET
 
 UPDATE StateOutflow2122
 SET state_name_dest = UPPER(state_name_dest);
+
+.import --skip 1 stateoutflow2021.csv StateOutflow2021
+ALTER TABLE StateOutflow2021
+    ADD COLUMN agi_per_capita INTEGER GENERATED ALWAYS AS (CASE WHEN num_people = 0 THEN 0 ELSE agi / num_people END);
+
+ALTER TABLE StateOutflow2021 ADD COLUMN state_orig VARCHAR(2);
+ALTER TABLE StateOutflow2021 ADD COLUMN state_name_orig VARCHAR(50);
+
+UPDATE StateOutflow2021
+SET
+    state_orig = (SELECT postal_code FROM FIPS WHERE FIPS.fips = StateOutflow2021.fips_orig),
+    state_name_orig = (SELECT name FROM FIPS WHERE FIPS.fips = StateOutflow2021.fips_orig);
+
+UPDATE StateOutflow2021
+SET state_name_dest = UPPER(state_name_dest);
