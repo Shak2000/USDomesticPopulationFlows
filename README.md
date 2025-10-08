@@ -26,14 +26,22 @@ The repository contains several key data files. The project uses SQLite for data
 ## Getting Started
 
 1. Ensure you have SQLite installed on your system
-2. Run the database setup script:
-   ```bash
-   ./manage_db.sh
-   ```
-3. The script will:
+2. Make the database setup script executable:
+    ```bash
+    chmod +x manage_db.sh
+    ```
+3. Run the database setup script:
+    ```bash
+    ./manage_db.sh create
+    ```
+The script will:
    - Create the necessary database tables
    - Import the CSV data files
    - Set up the required indexes
+4. To clean up the database, run this script:
+    ```bash
+    ./manage_db.sh delete
+    ```
 
 ## Data Analysis
 
