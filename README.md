@@ -7,6 +7,7 @@ This repository contains a comprehensive dataset and analysis tools for studying
 The repository contains several key data files. The project uses SQLite for data storage and analysis. The components are arranged as follows:
 
 - `data.db`: SQLite database containing the migration data
+- `fips.csv`: Federal Information Processing Standard (FIPS) codes for U.S. states
 - `manage_db.sh`: Shell script for database management
 - `queries/`: Directory containing SQL queries for data analysis:
   - `define-tables.sql`: Database schema definition
@@ -17,11 +18,9 @@ The repository contains several key data files. The project uses SQLite for data
   - `two-state-inflow.sql`: Analysis of migration between specific state pairs
   - `two-state-outflow.sql`: Analysis of outbound migration patterns
 - `data/`: Directory containing the data loaded into the database
-  - `fips.csv`: Federal Information Processing Standard (FIPS) codes for U.S. states
-  - `stateinflow2021.csv`: Records of population inflows to each state for 2020-2021
   - `stateinflow2122.csv`: Records of population inflows to each state for 2021-2022
-  - `stateoutflow2021.csv`: Records of population outflows to each state for 2020-2021
   - `stateoutflow2122.csv`: Records of population outflows to each state for 2021-2022
+  - Similarly named `.csv` files for both inflows and outflows for every tax year from 2011-2012 to 2020-2021.
 
 ## Getting Started
 

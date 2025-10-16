@@ -1,5 +1,5 @@
 .mode csv
-.import --skip 1 ./data/fips.csv FIPS
+.import --skip 1 ./fips.csv FIPS
 
 -- 2021-2022 data
 .import --skip 1 ./data/stateoutflow2122.csv StateOutflow2122
