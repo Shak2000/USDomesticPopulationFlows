@@ -8,6 +8,7 @@ The repository contains several key data files. The project uses SQLite for data
 
 - `data.db`: SQLite database containing the migration data
 - `fips.csv`: Federal Information Processing Standard (FIPS) codes for U.S. states
+- `irs_soi_2011_2022.py`: Scrape Statistics of Income (SOI) data from the IRS's website covering 2011-2012 through 2021-2022
 - `manage_db.sh`: Shell script for database management
 - `queries/`: Directory containing SQL queries for data analysis:
   - `define-tables.sql`: Database schema definition
@@ -20,7 +21,7 @@ The repository contains several key data files. The project uses SQLite for data
 - `data/`: Directory containing the data loaded into the database
   - `stateinflow2122.csv`: Records of population inflows to each state for 2021-2022
   - `stateoutflow2122.csv`: Records of population outflows to each state for 2021-2022
-  - Similarly named `.csv` files for both inflows and outflows for every tax year from 2011-2012 to 2020-2021.
+  - Similarly named `.csv` files for both inflows and outflows covering 2011-2012 through 2020-2021.
 
 ## Getting Started
 
